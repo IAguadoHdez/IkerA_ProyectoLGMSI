@@ -1,0 +1,278 @@
+:root {
+  --accent: #3B82F6;
+  --celeste: #9DC1FB;
+  --c1: #ffffff;
+  --c2: #F5F5F5;
+  --c3: #E5E5E5;
+  --c4: #3E3737;
+  --c5: #000000;
+}
+
+/* Fuentes personalizadas */
+@font-face {
+  font-family: "Rubik";
+  src: url(./fonts/Rubik/static/Rubik-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--c4);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background: linear-gradient(to bottom, var(--c2), var(--accent));
+  color: var(--c4);
+}
+
+h1, h2, h3 {
+  font-family: "Rubik", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Botones */
+
+#btn-menu {
+  width: 35px;
+  right: 25px;
+  top: 20px;
+}
+
+#btn-close {
+   padding-top: 25px;
+   cursor: pointer;
+   width: 35px;
+   transform: translateX(150%);
+}
+
+#btn-close:hover,
+#btn-menu:hover {
+   width: 40px;
+}
+
+header nav button {
+  width: 80%;
+  border-radius: 10px;
+  padding: 3px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  border: 2.5px solid;
+}
+
+#inicio {
+  background-color: var(--c3);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#inicio:hover {
+  background-color: var(--c3);
+    font-weight: bold;
+}
+
+#Signup,#Login {
+  background-color: var(--celeste);
+  border-color: var(--accent);
+}
+
+#Signup:hover,#Login:hover {
+  background-color: var(--accent);
+  border-color: var(--celeste);
+  font-weight: bold;
+  color: var(--c2);
+}
+
+.btnLeerMas {
+  margin-top: 10px;
+  background-color: var(--celeste);
+  width: 65px;
+  height: 25px;
+  border-radius: 8px;
+  color: var(--c4);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnLeerMas:hover {
+  background-color: var(--accent);
+  color: var(--c3);
+  font-weight: bold;
+  font-size: 15px;
+  width: 80px;
+  transition: 0.4s ease-in;
+}
+
+.btnLeerMas:last-child {
+  margin-bottom: 15px;
+}
+
+.heart {
+  background-color: var(--c3);
+  color: var(--c4);
+  font-weight: bold;
+  width: 65px;
+  height: 25px;
+  border-radius: 8px;
+}
+
+.heart:hover {
+  background-color: var(--c3);
+  color: red;
+  font-weight: bold;
+  width: 65px;
+  height: 25px;
+  border-radius: 8px;
+  transition: 0.4s ease-in;
+  cursor: pointer;
+}
+/*SPAN */
+span {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 18px;
+}
+/* Header */
+
+header {
+  background-color: var(--celeste);
+  height: 60px;
+  padding-bottom: 20px;
+  align-items: center;
+  border-bottom: 4px solid;
+  border-color: var(--accent);
+}
+
+header nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px;
+  padding-left: 10px;
+  background-color: var(--c2);
+  border-left: 4px solid var(--c3);
+}
+
+img[alt="menu"] {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+header nav ul li {
+  padding: 8px 0;
+  list-style: none;
+  text-align: left;
+}
+
+header img {
+  margin: 0 auto;
+  width: 200px;
+  transform: translateY(-20%);
+}
+
+header nav ul {
+  right: 0;
+}
+
+.nav-visible {
+  display: block;
+  z-index: 2;
+}
+
+header nav ul {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+header nav ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+header nav ul li:hover {
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer{
+  width: 100%;
+  border-top: 3px solid var(--accent);
+  position: fixed;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer ul li {
+  display: inline-block;
+  padding: 0px 15px;
+  font-size: 17px;
+  color: var(--c4);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+footer ul li:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+footer ul li img {
+  width: 15px;
+}
+
+footer ul li img:hover {
+  width: 18px;
+}
+
+@media (min-width: 577px) {
+  footer img{ 
+    width: 160px;
+  }
+
+  footer ul li{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  footer ul li img:hover {
+    width: 20px;
+  }
+  #btn-menu{
+    top: 30px;
+  }
+}
+
+@media (min-width:1025px) {
+  header img {
+    width: 300px;
+  }
+  header {
+    height: 100px;
+  }
+
+  #btn-menu {
+    width: 45px;
+  }
+  #btn-menu:hover {
+    width: 50px;
+  }
+}
+
