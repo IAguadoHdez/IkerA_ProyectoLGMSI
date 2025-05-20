@@ -1,15 +1,14 @@
 const btnMenu = document.querySelector("#btn-menu");
-
 const navHeader = document.querySelector("#nav-header");
-
 const btnClose = document.querySelector("#btn-close");
-
 const btnLogin = document.querySelector("#Login");
-
 const btnSignup = document.querySelector("#Signup");
+const Inicio = document.querySelector('#inicio');
+const LogoInicio = document.querySelector('img[alt="Logo"]');
 
 const currentPage = window.location.pathname.split("/").pop();
 
+// Menú hamburguesa
 btnMenu.addEventListener("click", () => {
   navHeader.classList.add("nav-visible");
   navHeader.classList.remove("btn-menu"); 
@@ -20,35 +19,44 @@ btnClose.addEventListener("click", () => {
   navHeader.classList.add("btn-menu");
 });
 
-  // Botones del nav
-    var Inicio = document.querySelector('#inicio');
-    if (Inicio) {
-        Inicio.onclick = function() {
-            location.href = ".\\index.html";
+// Redirección al index.html (logo e inicio)
+LogoInicio.addEventListener("click", () => {
+  location.href = "../index.html";
+});
+
+Inicio.addEventListener("click", () => {
+  location.href = "../index.html";
+});
+
+
+// Botón de login
+if (btnLogin) {
+    btnLogin.onclick = function () {
+        location.href = "/paginas/login.html";
+    };
+}
+
+// Botón de signup
+if (btnSignup) {
+    btnSignup.onclick = function () {
+        location.href = "/paginas/signup.html";
+    };
+}
+
+// Desde login, botón que lleva a signup en la misma carpeta
+if (currentPage === "login.html") {
+    if (btnSignup) {
+        btnSignup.onclick = function () {
+            location.href = "signup.html";
         };
     }
-   if (btnLogin) {
-    btnLogin.onclick = function () {
-      location.href = ".\\login.html";
-    };
-  }
+    if (btnLogin) {
+        btnLogin.style.display = "none";
+    }
+}
 
-  if (btnSignup) {
-    btnSignup.onclick = function () {
-      location.href = ".\\signup.html";
-    };
-  }
-  
-   // Ocultar el botón correspondiente según la página
-  if (currentPage === "login.html") {
-    btnLogin.style.display = "none";
-  }
-
-  if (currentPage === "signup.html") {
-    btnSignup.style.display = "none";
-  }
-
- 
-  
-  
-
+if (currentPage === "signup.html") {
+    if (btnSignup) {
+        btnSignup.style.display = "none";
+    }
+}

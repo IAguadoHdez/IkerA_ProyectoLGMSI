@@ -23,7 +23,6 @@ main {
 
 .form-container:hover {
   transform: scale(1.05);
-  cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -42,6 +41,7 @@ main {
   border: 1px solid var(--accent);
   border-radius: 8px;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .form-container button {
@@ -50,8 +50,8 @@ main {
   color: white;
   border: none;
   border-radius: 8px;
+  cursor:pointer;
   font-weight: bold;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 15px;
   letter-spacing: 2px;
@@ -60,4 +60,8 @@ main {
 .form-container button:hover {
   background-color: var(--celeste);
   color: var(--c4);
+}
+
+label {
+  font-size: 15px;
 }

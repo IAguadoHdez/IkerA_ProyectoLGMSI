@@ -37,7 +37,7 @@ h1, h2, h3 {
   font-family: "Rubik", sans-serif;
 }
 
-p {
+p,label{
   font-family: "Poppins", sans-serif;
 }
 
@@ -183,6 +183,7 @@ header img {
   margin: 0 auto;
   width: 200px;
   transform: translateY(-20%);
+  cursor: pointer;
 }
 
 header nav ul {
