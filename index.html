@@ -9,15 +9,17 @@
   </head>
   <body>
     <header>
-      <img src="./assets/img/Logo.png" alt="Logo">
-      <img id="btn-menu" src="./assets/img/menu.png" alt="menu">
-      <nav id="nav-header">
-        <img id="btn-close" src="./assets/img/icon-close-menu.svg" alt="Close">
-        <button id="inicio">Inicio</button>
-        <button id="Login">LogIN</button>
-        <button id="Signup">SignUP</button>
-      </nav>
-    </header>
+  <div class="contenedor-header">
+    <img src="./assets/img/Logo.png" alt="Logo" class="logo" />
+    <img id="btn-menu" src="./assets/img/menu.png" alt="menu" class="hamburguesa" />
+  </div>
+  <nav id="nav-header">
+    <img id="btn-close" src="./assets/img/icon-close-menu.svg" alt="Close" />
+    <button id="inicio">Inicio</button>
+    <button id="Login">LogIN</button>
+    <button id="Signup">SignUP</button>
+  </nav>
+</header>
     <main>
       <section class="Article-D">
         <h3>Artículos Destacados</h3>
@@ -68,20 +70,15 @@
         </div>
       </section>
     </main>
-
     <footer>
-      <nav>
-        <img src="./assets/img/Logo.png" alt="Logo" />
+      <div class="contenedor-footer">
+        <img src="./assets/img/Logo.png" alt="Logo">
         <ul>
-          <li><img src="./assets/img/twitter.svg" alt="X" /></li>
-          <li><img src="./assets/img/linkedin.svg" alt="LinkedIN" /></li>
-          <li><img src="./assets/img/instagram.svg" alt="instagram" /></li>
-          <li>Cookies</li>
-          <li>Términos de privacidad</li>
+          <li>Contacto</li>
+          <li>Sobre nosotros</li>
         </ul>
-      </nav>
+      </div>
     </footer>
-
     <script src="./js/LeerMas.js"></script>
     <script src="./js/menu.js"></script>
   </body>

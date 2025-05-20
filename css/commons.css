@@ -37,38 +37,22 @@ h1, h2, h3 {
   font-family: "Rubik", sans-serif;
 }
 
-p,label{
+p, label {
   font-family: "Poppins", sans-serif;
 }
 
 /* Botones */
 
-#btn-menu {
-  width: 35px;
-  right: 25px;
-  top: 20px;
-}
-
 #btn-close {
-   padding-top: 25px;
-   cursor: pointer;
-   width: 35px;
-   transform: translateX(150%);
+  padding-top: 25px;
+  cursor: pointer;
+  width: 35px;
+  transform: translateX(150%);
 }
 
 #btn-close:hover,
 #btn-menu:hover {
-   width: 40px;
-}
-
-header nav button {
-  width: 80%;
-  border-radius: 10px;
-  padding: 3px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  font-size: 15px;
-  border: 2.5px solid;
+  width: 40px;
 }
 
 #inicio {
@@ -77,16 +61,18 @@ header nav button {
   margin-bottom: 20px;
 }
 #inicio:hover {
-  background-color: var(--c3);
-    font-weight: bold;
+  background-color: var(--accent);
+  font-weight: bold;
+  color: var(--c2);
+  border-color: var(--celeste);
 }
 
-#Signup,#Login {
+#Signup, #Login {
   background-color: var(--celeste);
   border-color: var(--accent);
 }
 
-#Signup:hover,#Login:hover {
+#Signup:hover, #Login:hover {
   background-color: var(--accent);
   border-color: var(--celeste);
   font-weight: bold;
@@ -136,144 +122,211 @@ header nav button {
   transition: 0.4s ease-in;
   cursor: pointer;
 }
-/*SPAN */
+
+/* Header */
+header {
+  border-bottom: 4px solid var(--accent);
+}
+
+.contenedor-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+.hamburguesa {
+  width: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+/* Menú desplegable */
+#nav-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: var(--c2);
+  border-left: 4px solid var(--c3);
+  padding-top: 50px;
+  box-sizing: border-box;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+/* Menú visible */
+#nav-header.nav-visible {
+  transform: translateX(0);
+}
+
+/* Botón cerrar */
+#btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100000;
+  transition: width 0.3s ease;
+  display: block;
+}
+
+#btn-close:hover {
+  width: 40px;
+}
+
+/* Botones dentro del nav */
+header nav button {
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 2.5px solid var(--accent);
+  cursor: pointer;
+  background-color: var(--celeste);
+  color: var(--c4);
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header nav button:hover {
+  background-color: var(--accent);
+  color: var(--c2);
+  font-weight: bolder;
+}
+
+#btn-menu {
+  cursor: pointer;
+  width: 35px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+/* Footer */
+footer {
+  margin-top: 10px;
+  width: 100%;
+  border-top: 3px solid var(--accent);
+  background: linear-gradient(to bottom, var(--celeste), var(--c1));
+  padding: 10px 0;
+}
+
+.contenedor-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer img[alt="Logo"] {
+  width: 140px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  font-size: 15px;
+  color: var(--c4);
+  text-align: center;
+  cursor: pointer;
+  transition: font-weight 0.3s;
+}
+
+footer ul li:hover {
+  font-weight: bold;
+}
+
+footer ul li img {
+  width: 20px;
+  transition: width 0.3s;
+}
+
+footer ul li img:hover {
+  width: 24px;
+}
+/* Span */
 span {
   color: var(--accent);
   font-weight: bold;
   font-size: 18px;
 }
-/* Header */
-
-header {
-  background-color: var(--celeste);
-  height: 60px;
-  padding-bottom: 20px;
-  align-items: center;
-  border-bottom: 4px solid;
-  border-color: var(--accent);
-}
-
-header nav {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 200px;
-  padding-left: 10px;
-  background-color: var(--c2);
-  border-left: 4px solid var(--c3);
-}
-
-img[alt="menu"] {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  z-index: 2;
-  cursor: pointer;
-}
-
-header nav ul li {
-  padding: 8px 0;
-  list-style: none;
-  text-align: left;
-}
-
-header img {
-  margin: 0 auto;
-  width: 200px;
-  transform: translateY(-20%);
-  cursor: pointer;
-}
-
-header nav ul {
-  right: 0;
-}
-
-.nav-visible {
-  display: block;
-  z-index: 2;
-}
-
-header nav ul {
-  margin-bottom: 30px;
-  font-size: 20px;
-}
-
-header nav ul li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-header nav ul li:hover {
-  font-weight: bold;
-}
-
-/* Footer */
-
-footer{
-  width: 100%;
-  border-top: 3px solid var(--accent);
-  position: fixed;
-}
-
-footer img {
-  width: 100px;
-}
-
-footer ul li {
-  display: inline-block;
-  padding: 0px 15px;
-  font-size: 17px;
-  color: var(--c4);
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-footer ul li:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
-
-footer ul li img {
-  width: 15px;
-}
-
-footer ul li img:hover {
-  width: 18px;
-}
-
+/* Responsive */
 @media (min-width: 577px) {
-  footer img{ 
+  .contenedor-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  footer img[alt="Logo"] {
     width: 160px;
   }
 
-  footer ul li{
-    font-size: 20px;
-    padding-bottom: 20px;
+  footer ul {
+    gap: 30px;
   }
 
-  footer ul li img:hover {
-    width: 20px;
+  footer ul li {
+    font-size: 20px;
+    padding-bottom: 0;
   }
-  #btn-menu{
-    top: 30px;
+
+  .hamburguesa {
+    width: 40px;
   }
 }
 
-@media (min-width:1025px) {
-  header img {
+@media (min-width: 1025px) {
+  .logo {
     width: 300px;
   }
-  header {
+
+  .contenedor-header {
     height: 100px;
   }
 
-  #btn-menu {
+  .hamburguesa {
     width: 45px;
   }
-  #btn-menu:hover {
+
+  .hamburguesa:hover {
     width: 50px;
   }
+
+  .contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+  }
+
+  footer img[alt="Logo"] {
+    width: 200px;
+  }
 }
+
 
