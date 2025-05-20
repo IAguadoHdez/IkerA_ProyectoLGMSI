@@ -3,55 +3,64 @@ const navHeader = document.querySelector("#nav-header");
 const btnClose = document.querySelector("#btn-close");
 const btnLogin = document.querySelector("#Login");
 const btnSignup = document.querySelector("#Signup");
-const Inicio = document.querySelector('#inicio');
-const LogoInicio = document.querySelector('img[alt="Logo"]');
+const inicio = document.querySelector("#inicio");
+const logoInicio = document.querySelector('img[alt="Logo"]');
 
-const currentPage = window.location.pathname.split("/").pop(); // Recoge la pagina en la que estas
+const currentPage = window.location.pathname.split("/").pop(); // Página actual
 
 // Menú hamburguesa
-btnMenu.addEventListener("click", () => {
-  navHeader.classList.add("nav-visible");
-  navHeader.classList.remove("btn-menu"); 
-});
+if (btnMenu && navHeader) {
+    btnMenu.addEventListener("click", () => {
+        navHeader.classList.add("nav-visible");
+    });
+}
 
-btnClose.addEventListener("click", () => {
-  navHeader.classList.remove("nav-visible");
-  navHeader.classList.add("btn-menu");
-});
+if (btnClose && navHeader) {
+    btnClose.addEventListener("click", () => {
+        navHeader.classList.remove("nav-visible");
+    });
+}
 
-// Redirección al index.html (logo e inicio)
-LogoInicio.addEventListener("click", () => {
-  location.href = "../index.html";
-});
 
-Inicio.addEventListener("click", () => {
-  location.href = "../index.html";
-});
+if (logoInicio) {
+  logoInicio.addEventListener("click", () => {
+    if (currentPage === "index.html" || currentPage === "") {
+      location.reload(); 
+    } else {
+      location.href = "../index.html";
+    }
+  });
+}
+
+if (inicio) {
+  inicio.addEventListener("click", () => {
+    location.href = "../index.html";
+  });
+}
+
 
 
 // Botón de login
 if (btnLogin) {
-    btnLogin.onclick = function () {
+    btnLogin.addEventListener("click", () => {
         location.href = "/paginas/login.html";
-    };
+    });
 }
 
-// Botón de signup
+// Botón de registro
 if (btnSignup) {
-    btnSignup.onclick = function () {
+    btnSignup.addEventListener("click", () => {
         location.href = "/paginas/signup.html";
-    };
+    });
 }
 
-// Desde login, botón que lleva a signup en la misma carpeta
+// Oculta dependiendo de la pagina
 if (currentPage === "login.html") {
-    if (btnSignup) {
-        btnSignup.onclick = function () {
-            location.href = "signup.html";
-        };
-    }
     if (btnLogin) {
         btnLogin.style.display = "none";
+    }
+    if (btnSignup) {
+        btnSignup.onclick = () => location.href = "signup.html";
     }
 }
 
