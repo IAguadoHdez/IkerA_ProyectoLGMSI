@@ -24,6 +24,12 @@ LogoInicio.addEventListener("click", () => {
   location.href = "../index.html";
 });
 
+if(currentPage === "index.html") {
+  if(LogoInicio){
+    location.href = "index.html";
+  }
+};
+
 Inicio.addEventListener("click", () => {
   location.href = "../index.html";
 });
