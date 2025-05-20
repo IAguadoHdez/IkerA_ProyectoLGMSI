@@ -6,7 +6,7 @@ const btnSignup = document.querySelector("#Signup");
 const Inicio = document.querySelector('#inicio');
 const LogoInicio = document.querySelector('img[alt="Logo"]');
 
-const currentPage = window.location.pathname.split("/").pop();
+const currentPage = window.location.pathname.split("/").pop(); // Recoge la pagina en la que estas
 
 // Menú hamburguesa
 btnMenu.addEventListener("click", () => {
