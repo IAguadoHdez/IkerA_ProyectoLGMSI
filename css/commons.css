@@ -8,7 +8,7 @@
   --c5: #000000;
 }
 
-/* Fuentes personalizadas */
+/* Fuentes */
 @font-face {
   font-family: "Rubik";
   src: url(./fonts/Rubik/static/Rubik-Regular.ttf) format('truetype');
@@ -23,9 +23,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
   color: var(--c4);
+  text-align: center;
 }
+
 
 body {
   font-family: "Rubik", sans-serif;
@@ -41,19 +42,6 @@ p, label {
   font-family: "Poppins", sans-serif;
 }
 
-/* Botones */
-
-#btn-close {
-  padding-top: 25px;
-  cursor: pointer;
-  width: 35px;
-  transform: translateX(150%);
-}
-
-#btn-close:hover,
-#btn-menu:hover {
-  width: 40px;
-}
 
 #inicio {
   background-color: var(--c3);
@@ -147,6 +135,7 @@ header {
   cursor: pointer;
   position: absolute;
   right: 20px;
+  transition: width 0.3s ease-in;
 }
 
 /* Menú desplegable */
@@ -160,18 +149,17 @@ header {
   border-left: 4px solid var(--c3);
   padding-top: 50px;
   box-sizing: border-box;
-  z-index: 2;
+  z-index: 5;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   display: block;
 }
 
-/* Menú visible */
 #nav-header.nav-visible {
   transform: translateX(0);
 }
 
-/* Botón cerrar */
+
 #btn-close {
   position: absolute;
   top: 10px;
@@ -254,21 +242,15 @@ footer ul li {
   color: var(--c4);
   text-align: center;
   cursor: pointer;
-  transition: font-weight 0.3s;
+  transition: color 0.3s ease-in, font-size 0.4s ease-in;
 }
 
 footer ul li:hover {
-  font-weight: bold;
+  color: var(--accent);
+  font-size: 22px;
 }
 
-footer ul li img {
-  width: 20px;
-  transition: width 0.3s;
-}
 
-footer ul li img:hover {
-  width: 24px;
-}
 /* Span */
 span {
   color: var(--accent);
@@ -311,11 +293,11 @@ span {
   }
 
   .hamburguesa {
-    width: 45px;
+    width: 46px;
   }
 
   .hamburguesa:hover {
-    width: 50px;
+    width: 60px;
   }
 
   .contenedor-footer {
