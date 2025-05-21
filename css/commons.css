@@ -113,7 +113,7 @@ p, label {
 
 /* Header */
 header {
-  border-bottom: 4px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 .contenedor-header {
